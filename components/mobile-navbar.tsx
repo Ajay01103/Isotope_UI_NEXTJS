@@ -4,6 +4,7 @@ import { ScrollArea } from "./ui/scroll-area"
 import Link from "next/link"
 import { SiteLogo } from "./site-logo"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion"
+import { Button } from "./ui/button"
 
 export const MobileNavbar = () => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -73,7 +74,7 @@ export const MobileNavbar = () => {
           side="right"
           className="pl-1 pr-0 pt-9"
         >
-          <div className="w-full px-7">
+          <div className="w-full px-7 flex flex-col justify-between">
             <Link
               href="/"
               className="flex items-center"
@@ -83,6 +84,21 @@ export const MobileNavbar = () => {
                 aria-hidden="true"
               />
             </Link>
+
+            <div className="flex pt-6 mb-4 gap-y-1.5 flex-col justify-between">
+              <Button
+                variant="outline"
+                // className="font-medium text-gray-600 hover:text-gray-500 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              >
+                Login
+              </Button>
+
+              <div className="pt-3 md:pt-0">
+                <Button className="py-2.5 w-full px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-violet-900 text-white hover:bg-violet-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                  Request demo
+                </Button>
+              </div>
+            </div>
           </div>
           <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
             <div className="pl-1 pr-7">
@@ -94,7 +110,7 @@ export const MobileNavbar = () => {
                   <AccordionTrigger>Lobby</AccordionTrigger>
 
                   <AccordionContent>
-                    <div className="flex flex-col space-y-2 cursor-pointer">
+                    <div className="flex flex-col text-foreground space-y-2 cursor-pointer">
                       <h3>Products</h3>
                       <h3>Create List</h3>
                       <h3>Blog</h3>
@@ -102,6 +118,7 @@ export const MobileNavbar = () => {
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
+
               <Accordion
                 type="multiple"
                 className="w-full"
@@ -110,10 +127,52 @@ export const MobileNavbar = () => {
                   <AccordionTrigger>My Account</AccordionTrigger>
 
                   <AccordionContent>
-                    <div className="flex flex-col space-y-2 cursor-pointer">
+                    <div className="flex text-foreground flex-col space-y-2 cursor-pointer">
                       <h3>Account</h3>
                       <h3>Orders</h3>
                       <h3>Stores</h3>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+
+              <Accordion
+                type="multiple"
+                className="w-full"
+              >
+                <AccordionItem value="Clothing">
+                  <AccordionTrigger>Clothing</AccordionTrigger>
+
+                  <AccordionContent>
+                    <div className="flex text-foreground flex-col space-y-2 cursor-pointer">
+                      <h3>All</h3>
+                      <h3>T-shirts</h3>
+                      <h3>Hoodies</h3>
+                      <h3>Shirts</h3>
+                      <h3>Pants</h3>
+                      <h3>Suits</h3>
+                      <h3>Formal Wearings</h3>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+
+              <Accordion
+                type="multiple"
+                className="w-full"
+              >
+                <AccordionItem value="Shoes">
+                  <AccordionTrigger>Accessories</AccordionTrigger>
+
+                  <AccordionContent>
+                    <div className="flex text-foreground flex-col space-y-2 cursor-pointer">
+                      <h3>All</h3>
+                      <h3>Cosmetics</h3>
+                      <h3>Home Toolings</h3>
+                      <h3>Brushes</h3>
+                      <h3>Bagpacks</h3>
+                      <h3>classics</h3>
+                      <h3>Guns and Ammos</h3>
                     </div>
                   </AccordionContent>
                 </AccordionItem>

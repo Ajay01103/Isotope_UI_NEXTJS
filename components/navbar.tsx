@@ -413,7 +413,7 @@ export const Navbar = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <div className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
+            <div className="hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
               <div className="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:gap-x-7 md:mt-0 md:ps-7 md:divide-y-0 md:divide-solid dark:divide-gray-700">
                 <Button
                   variant="outline"
