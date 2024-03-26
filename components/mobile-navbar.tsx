@@ -1,6 +1,9 @@
 import React from "react"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 import { ScrollArea } from "./ui/scroll-area"
+import Link from "next/link"
+import { SiteLogo } from "./site-logo"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion"
 
 export const MobileNavbar = () => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -66,17 +69,59 @@ export const MobileNavbar = () => {
             </button>
           </div>
         </SheetTrigger>
-        <SheetContent side="right"></SheetContent>
+        <SheetContent
+          side="right"
+          className="pl-1 pr-0 pt-9"
+        >
+          <div className="w-full px-7">
+            <Link
+              href="/"
+              className="flex items-center"
+            >
+              <SiteLogo
+                className="mr-2 size-4"
+                aria-hidden="true"
+              />
+            </Link>
+          </div>
+          <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+            <div className="pl-1 pr-7">
+              <Accordion
+                type="multiple"
+                className="w-full"
+              >
+                <AccordionItem value="Lobby">
+                  <AccordionTrigger>Lobby</AccordionTrigger>
+
+                  <AccordionContent>
+                    <div className="flex flex-col space-y-2 cursor-pointer">
+                      <h3>Products</h3>
+                      <h3>Create List</h3>
+                      <h3>Blog</h3>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <Accordion
+                type="multiple"
+                className="w-full"
+              >
+                <AccordionItem value="Account">
+                  <AccordionTrigger>My Account</AccordionTrigger>
+
+                  <AccordionContent>
+                    <div className="flex flex-col space-y-2 cursor-pointer">
+                      <h3>Account</h3>
+                      <h3>Orders</h3>
+                      <h3>Stores</h3>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </ScrollArea>
+        </SheetContent>
       </Sheet>
-      <div className="md:hidden">
-        <button
-          type="button"
-          className="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          data-hs-collapse="#navbar-collapse-with-animation"
-          aria-controls="navbar-collapse-with-animation"
-          aria-label="Toggle navigation"
-        ></button>
-      </div>
     </>
   )
 }
