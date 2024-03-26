@@ -94,13 +94,13 @@ export const MobileNavbar = () => {
               </Button>
 
               <div className="pt-3 md:pt-0">
-                <Button className="py-2.5 w-full px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-violet-900 text-white hover:bg-violet-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                <Button className="py-2.5 w-full px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-violet-700 text-white hover:bg-violet-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                   Request demo
                 </Button>
               </div>
             </div>
           </div>
-          <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+          <ScrollArea className="my-4 h-full pb-10 pl-6">
             <div className="pl-1 pr-7">
               <Accordion
                 type="multiple"
