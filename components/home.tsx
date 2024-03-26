@@ -7,7 +7,7 @@ const HomePage = () => {
         <section className="bg-[#F4FDFF] md:pb-24">
           <div className="w-4/5 mx-auto ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
-              <div className="pt-4 md:pt-16 mt-4 md:mt-12 3xl:mt-36 lg:w-4/5 text-center lg:text-left">
+              <div className="pt-8 md:pt-16 mt-4 md:mt-12 3xl:mt-36 lg:w-4/5 text-center lg:text-left">
                 <span className="badgePastelGradient rounded-2xl text-[#6A65FF] uppercase text-sm font-medium px-4 py-2 Inter">
                   Our Goal Is Simple
                 </span>
